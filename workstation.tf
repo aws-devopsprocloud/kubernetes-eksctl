@@ -3,7 +3,7 @@ module "eks-workstation" {
   ami = data.aws_ami.rhel-9.id
   name = "eks-workstation"
 
-  instance_type = "t3.micro"
+  instance_type = "t3.medium"
   subnet_id     = data.aws_subnet.default_vpc_subnet.id
   vpc_security_group_ids = [data.aws_security_group.allow_all.id]
   create_security_group = false
