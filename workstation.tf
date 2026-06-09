@@ -1,7 +1,7 @@
-module "workstation" {
+module "eks-workstation" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   ami = data.aws_ami.rhel-9.id
-  name = "workstation"
+  name = "eks-workstation"
 
   instance_type = "t3.micro"
   subnet_id     = data.aws_subnet.default_vpc_subnet.id
@@ -18,6 +18,6 @@ module "workstation" {
   tags = {
     Terraform   = "true"
     Environment = "dev"
-    Name = "workstation"
+    Name = "eks-workstation"
   }
 }
