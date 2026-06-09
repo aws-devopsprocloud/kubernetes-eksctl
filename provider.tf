@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "devopsprocloud-roboshop"
-    key = "eks-ctl"
+    key = "eksctl"
     region = "us-east-1"
     encrypt = true
     use_lockfile = true
