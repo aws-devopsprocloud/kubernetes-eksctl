@@ -20,5 +20,8 @@ sudo mv kubectl /usr/local/bin/kubectl
 sudo curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
 sudo tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
 sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
-sudo curl -sS https://webinstall.dev/k9s | bash
+git clone https://github.com/ahmetb/kubectx /opt/kubectx
+ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+curl -sS https://webinstall.dev/k9s | bash
+
 
